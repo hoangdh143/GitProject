@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tinh năm nhuận</title>
+</head>
+<body>
+	<h1>Công thức tính năm nhuận</h1>
+	<script type="text/javascript">
+		let Nam = parseInt(prompt("Nhap nam:"));
+		let ChiaHetCho4 = Nam % 4 == 0;
+		let ChiaHetCho100 = Nam % 100 == 0;
+		let NamNhuan = false;
+		if (ChiaHetCho4) {
+			if (ChiaHetCho100) {
+				NamNhuan = false;
+			}
+			else {
+				NamNhuan = true;
+			}
+		} else {
+			NamNhuan = false;
+		}
+		if (NamNhuan) {
+			alert("Đây là năm nhuận");
+		} else {
+			alert("Đây không phải năm nhuận");
+		}
+	</script>
+</body>
+</html>
