@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Cấu trúc switch case - Bài 2</title>
+</head>
+
+<body>
+  <h1>Cấu trúc switch case - Bài 2</h1>
+  <script type="text/javascript">
+    let value = prompt('Type a number', 0);
+    let positive = null;
+    if (value!=0) {
+      positive = value>0;
+    }
+    switch (positive) {
+      case true:
+        alert(1);
+        break;
+      case false:
+        alert(-1);
+        break;
+      default:
+        alert(0);
+    }
+  </script>
+</body>
+
+</html>
