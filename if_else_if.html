@@ -1,23 +1,30 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Luyện tập if else if</title>
-  </head>
-  <body>
-    <h1>Luyện tập cấu trúc if else if</h1>
-    <script type="text/javascript">
+
+<head>
+  <meta charset="utf-8">
+  <title>Luyện tập if else if</title>
+</head>
+
+<body>
+  <h1>Luyện tập cấu trúc if else if</h1>
+  <script type="text/javascript">
     let username = prompt("Please enter user name:");
     if (username == "Admin") {
       let password = prompt("Please enter password:");
       if (password == "TheMaster") {
         alert("Welcome!");
+      } else if (password == "") {
+        alert("Canceled.");
       } else {
         alert("Wrong password");
       }
+    } else if (username == "") {
+      alert("Canceled.");
     } else {
       alert("Wrong user name")
     }
-    </script>
-  </body>
+  </script>
+</body>
+
 </html>
