@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Tính chỉ số cân nặng của cơ thể</title>
+</head>
+
+<body>
+  <h1>Tính chỉ số cân nặng</h1>
+  <form name="myForm">
+    <p> Weight (kg): </p>
+    <input type="number" name="weight">
+    <p> Height (cm): </p>
+    <input type="number" name="height">
+    <p>
+    </P>
+    <input type="button" value="Đánh giá" onclick="BMICalculate()">
+    <h2>Kết quả</h2>
+    <p id="result"></p>
+  </form>
+  <script type="text/javascript">
+    function BMICalculate() {
+      let weight = document.forms["myForm"]["weight"].value;
+      let height = document.forms["myForm"]["height"].value;
+      if (height == "" || weight == "") {
+        result = "Please input again";
+      } else {
+        let BMI = weight / (height * height);
+        switch (true) {
+          case BMI < 18.5:
+            result = "Underweight";
+            break;
+          case BMI >= 18.5 && BMI < 25:
+            result = "Normal";
+            break;
+          case BMI >= 25 && BMI < 30:
+            result = "Overweight";
+            break;
+          case BMI >= 30:
+            result = "Obese";
+            break;
+        }
+        result = "You are " + result;
+      }
+      document.getElementById('result').innerHTML = result;
+    }
+    //window.onload = init;
+  </script>
+</body>
+
+</html>
