@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Tính số ngày trong tháng</title>
+  </head>
+  <body>
+    <h1>Công thức tính số ngày trong tháng</h1>
+    <form name="myForm">
+      <p>Nhập số tháng<p>
+      <input type="number" name="Thang">
+      <input type="button" value="Tính số ngày" onclick="TinhSoNgay()"/>
+    </form>
+    <p id="result"></P>
+    <script type="text/javascript">
+      function TinhSoNgay() {
+        let Thang = parseInt(document.forms["myForm"]["Thang"].value);
+        if (isNaN(Thang)) {result="Please input again"} else {
+        let Ngay = 0;
+        switch (Thang) {
+          case 1:
+          case 3:
+          case 5:
+          case 7:
+          case 8:
+          case 10:
+          case 12:
+           Ngay="31";
+           break;
+          case 2:
+            Ngay="28 hoặc 29";
+            break;
+          default:
+            Ngay="30";
+        }
+        result = "Tháng "+ Thang + " có " + Ngay + " ngày"
+      }
+        document.getElementById('result').innerHTML= result;
+      }
+
+    </script>
+  </body>
+</html>
