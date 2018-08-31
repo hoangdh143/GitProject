@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Hiển thị mảng</title>
+  <style media="screen">
+    .container {
+      width: 350px;
+      height: 400px;
+      margin: 50px auto;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>Nhập và hiển thị mảng</h1>
+    <form id="BieuMau">
+      <input type="text" onfocus="this.value = ''" name="PhanTu">
+      <input type="button" name="Add" value="Add" onclick="ThemPhanTu()">
+      <input type="button" name="Display" value="Display" onclick="HienThi()">
+    </form>
+    <h3>Kết Quả</h3>
+    <p id="KetQua"></p>
+  </div>
+  <script type="text/javascript">
+    let Mang = []
+
+    function ThemPhanTu() {
+      value = document.forms["BieuMau"]["PhanTu"].value;
+      if (value != "") {
+        Mang.push(value);
+        alert("Added Successfully!")
+      }
+    }
+
+    function HienThi() {
+      result = "";
+      for (i = 0; i < Mang.length; i++) {
+        result += "<p> <b>Element " + i + ": </b>" + " " + Mang[i] + " </p>";
+      }
+      document.getElementById('KetQua').innerHTML = result;
+    }
+  </script>
+</body>
+
+</html>
