@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Số Nguyên Tố</title>
+</head>
+
+<body>
+  <h1>Dãy số nguyên tố</h1>
+  <div id="bang"></div>
+  <script type="text/javascript">
+    number = parseInt(prompt("Nhập số số nguyên tố:"));
+    while (number > 20 || number < 1) {
+    number = parseInt(prompt("Vui lòng nhập số dương nhỏ hơn 20:"));
+    }
+    document.getElementById('bang').innerHTML = DaySoNguyenTo(number);
+    function DaySoNguyenTo(n) {
+      let count = 0;
+      let i = 2;
+      let result = "";
+      while (count<n) {
+        if (KiemTra(i)) {
+          count++;
+          result = result + " " + i + " ";
+        }
+        i++;
+      }
+      return result;
+    }
+    function KiemTra(i) {
+      let value = true;
+      for (j=2; j<i; j++) {
+        if (i % j == 0) {
+          value = false;
+        }
+      }
+      return value;
+    }
+  </script>
+</body>
+
+</html>
