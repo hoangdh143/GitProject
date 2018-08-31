@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Đảo ngược mảng</title>
+</head>
+
+<body>
+<script type="text/javascript">
+  let x = [-3,5,1,3,2,10]
+  n = x.length;
+  for (i=0; i<(Math.floor(n/2)); i++) {
+    let b = 0;
+    b = x[i];
+    x[i] = x[n-i-1];
+    x[n-i-1] = b;
+  }
+  document.write(x);
+
+</script>
+</body>
+
+</html>
