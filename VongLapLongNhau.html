@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Vòng lặp lồng nhau</title>
+</head>
+
+<body>
+  <h1>Vòng lặp for</h1>
+  <div id="bang100"></div>
+  <h2>Vòng lặp while</h2>
+  <div id="bang101"></div>
+  <script type="text/javascript">
+    function VongLapFor() {
+      let result = "<table border='1' width='300' cellspacing='0' cellpadding='3'>";
+      let i, j = 1;
+      for (i = 1; i <= 10; i++) {
+        result = result + "<tr>";
+        for (j = 1; j <= 10; j++) {
+          result = result + "<td>" + i * j + "</td>";
+        }
+        result = result + "</tr>";
+      }
+      result = result + "</table>";
+      return result;
+    }
+    document.getElementById('bang100').innerHTML = VongLapFor();
+
+    function VongLapWhile() {
+      let result2 = "<table border='1' width='300' cellspacing='0' cellpadding='3'>";
+      let i = 1;
+      let j = 1;
+      while (i <= 10) {
+        result2 = result2 + "<tr>";
+        j = 1;
+        while (j <= 10) {
+          result2 = result2 + "<td>" + i * j + "</td>";
+          j++;
+        }
+        result2 = result2 + "</tr>";
+        i++;
+      }
+      result2 = result2 + "</table>";
+      return result2;
+    }
+    document.getElementById('bang101').innerHTML = VongLapWhile();
+  </script>
+</body>
+
+</html>
