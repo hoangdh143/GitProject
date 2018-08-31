@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Đảo ngược mảng</title>
+</head>
+
+<body>
+<script type="text/javascript">
+  Value = Number(prompt("Nhập giá trị:"));
+  let x = [-3,5,1,3,2,10];
+  let n = x.length;
+  let Found = false;
+  for (i=0; i<n; i++) {
+    if (x[i]==Value) {
+      alert("Value " + Value + " found at position " + i + " of array x");
+      Found = true;
+    }
+  }
+  if (Found == false) {
+    alert("Value not found!");
+  }
+
+</script>
+</body>
+
+</html>
